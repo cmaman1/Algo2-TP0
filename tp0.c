@@ -1,4 +1,5 @@
 #include "tp0.h"
+#include<stdbool.h>
 
 /* *****************************************************************
  *                     FUNCIONES A COMPLETAR                       *
@@ -33,15 +34,18 @@ int maximo(int vector[], int n) {
 
 }
 
-/* Compara dos arreglos de longitud especificada.
- *
- * Devuelve -1 si el primer arreglo es menor que el segundo; 0 si son
- * iguales; o 1 si el primero es el mayor.
- *
- * Un arreglo es menor a otro cuando al compararlos elemento a elemento,
- * el primer elemento en el que difieren no existe o es menor.
- */
+
 int comparar(int vector1[], int n1, int vector2[], int n2) {
+
+    for (int i = 0; i < n1; i++) {
+        while(vector1[i] != vector2[i]) {
+            if ( (vector1[i] < vector2[i]) || (!vector1[i] && vector2[i]) ) {
+                return -1;            
+            } else if ( (vector1[i] > vector2[i]) || (vector1[i] && !vector2[i]) ) {
+                return 1;       
+            }
+        }
+    }
     return 0;
 }
 

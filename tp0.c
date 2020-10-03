@@ -67,6 +67,7 @@ int comparar(int vector1[], int n1, int vector2[], int n2) {
                 return 1;       
             }
         }
+        
     }
 
     return 0;

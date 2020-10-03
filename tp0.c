@@ -42,7 +42,7 @@ int comparar(int vector1[], int n1, int vector2[], int n2) {
         if(n1 < n2) {
         
             for (int i = 0; i < n1; i++) {
-                if ( (vector1[i] > vector2[i])) {
+                if (vector1[i] > vector2[i]) {
                     return 1;       
                 }                
             }
@@ -51,7 +51,7 @@ int comparar(int vector1[], int n1, int vector2[], int n2) {
         } else if (n1 > n2) {
         
             for (int i = 0; i < n2; i++) {
-                if ( (vector1[i] < vector2[i]) ) {
+                if (vector1[i] < vector2[i]) {
                     return -1;            
                 }              
             }
@@ -61,9 +61,9 @@ int comparar(int vector1[], int n1, int vector2[], int n2) {
     } else {
         
         for (int i = 0; i < n1; i++) {
-            if ( (vector1[i] < vector2[i]) ) {
+            if (vector1[i] < vector2[i]) {
                 return -1;            
-            } else if ( (vector1[i] > vector2[i])) {
+            } else if (vector1[i] > vector2[i]) {
                 return 1;       
             }
         }
